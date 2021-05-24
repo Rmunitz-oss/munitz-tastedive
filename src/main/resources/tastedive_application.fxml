@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.layout.*?>
+        <?import javafx.scene.text.Text?>
+
+
+<?import java.util.ArrayList?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          prefHeight="400.0" prefWidth="500.0"
+          stylesheets="@tastedive_application.css">
+
+
+    <Label text = "Discover new music!" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="header" />
+    <Label text= "Enter the name of a favorite artist: " GridPane.columnIndex="1" GridPane.rowIndex="1"  styleClass="message" />
+    <TextField fx:id="bandNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Button fx:id="enterButton" text="Enter" onAction="#getSimilarMusic"
+            GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="1" />
+
+    <Label fx:id="resultsLabel" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="5" styleClass="message"/>
+
+    <Label fx:id="label1" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <Label fx:id="label2" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+    <Label fx:id="label3" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+    <Label fx:id="label4" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+    <Label fx:id="label5" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+
+    <Text fx:id="similarArtistText1" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+    <Text fx:id="similarArtistText2" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    <Text fx:id="similarArtistText3" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+    <Text fx:id="similarArtistText4" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+    <Text fx:id="similarArtistText5" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+    <fx:define>
+        <ArrayList fx:id="labelsArray">
+            <fx:reference source="label1"/>
+            <fx:reference source="label2"/>
+            <fx:reference source="label3"/>
+            <fx:reference source="label4"/>
+            <fx:reference source="label5"/>
+        </ArrayList>
+
+        <ArrayList fx:id="similarArtistTextsArray">
+        <fx:reference source="similarArtistText1"/>
+        <fx:reference source="similarArtistText2"/>
+        <fx:reference source="similarArtistText3"/>
+        <fx:reference source="similarArtistText4"/>
+        <fx:reference source="similarArtistText5"/>
+    </ArrayList>
+
+
+    </fx:define>
+
+
+</GridPane>
