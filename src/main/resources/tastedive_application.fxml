@@ -11,7 +11,7 @@
           stylesheets="@tastedive_application.css">
 
 
-    <Label text = "Discover new music!" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="header" />
+    <Label text = "Discover New Music!" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="header" />
     <Label text= "Enter the name of a favorite artist: " GridPane.columnIndex="1" GridPane.rowIndex="1"  styleClass="message" />
     <TextField fx:id="bandNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
     <Button fx:id="enterButton" text="Enter" onAction="#getSimilarMusic"
