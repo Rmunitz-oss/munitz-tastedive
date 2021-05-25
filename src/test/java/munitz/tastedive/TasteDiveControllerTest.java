@@ -8,7 +8,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -22,8 +21,6 @@ public class TasteDiveControllerTest {
     private List<Text>similarArtistTextsArray;
     private SimilarMusicFeed feed;
 
-    final String apiKey = "413205-SchoolPr-51ODUWYG";
-    final String type = "music";
 
     @BeforeClass
     public static void beforeClass() {
@@ -65,13 +62,13 @@ public class TasteDiveControllerTest {
         //given
         givenTasteDiveController();
         doReturn("Avicii").when(bandNameTextField).getText();
-        doReturn(Single.never()).when(service).getSimilarMusic("Avicii",type,apiKey);
+        doReturn(Single.never()).when(service).getSimilarMusic("Avicii");
 
         //when
         controller.getSimilarMusic();
 
         //then
-        verify(service).getSimilarMusic("Avicii",type,apiKey);
+        verify(service).getSimilarMusic("Avicii");
     }
 
     @Test

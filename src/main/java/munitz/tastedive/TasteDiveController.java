@@ -21,8 +21,6 @@ public class TasteDiveController {
 
     TasteDiveServiceFactory factory = new TasteDiveServiceFactory();
     TasteDiveService service;
-    final String apiKey = "413205-SchoolPr-51ODUWYG";
-    final String type = "music";
     String bandName;
 
     public TasteDiveController(TasteDiveService service){
@@ -42,7 +40,7 @@ public class TasteDiveController {
     public void getSimilarMusic(){
         clearResults();
         bandName = bandNameTextField.getText();
-        Disposable disposable = service.getSimilarMusic(bandName,type,apiKey)
+        Disposable disposable = service.getSimilarMusic(bandName)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.trampoline())
                 .subscribe(this :: onSimilarMusicFeed, this :: onError);

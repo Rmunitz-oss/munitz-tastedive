@@ -12,9 +12,7 @@ public class TasteDiveServiceTest {
         TasteDiveService service = factory.newInstance();
 
         //when
-        SimilarMusicFeed feed = service.getSimilarMusic("One Republic",
-                "music",
-                "413205-SchoolPr-51ODUWYG")
+        SimilarMusicFeed feed = service.getSimilarMusic("One Republic")
                 .blockingGet();
 
         //then
