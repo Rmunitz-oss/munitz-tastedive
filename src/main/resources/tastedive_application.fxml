@@ -11,13 +11,23 @@
           stylesheets="@tastedive_application.css">
 
 
-    <Label text = "Discover New Music!" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="header" />
-    <Label text= "Enter the name of a favorite artist: " GridPane.columnIndex="1" GridPane.rowIndex="1"  styleClass="message" />
-    <TextField fx:id="bandNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label text = "Discover New Music!"
+           GridPane.columnIndex="1" GridPane.rowIndex="0"
+           styleClass="header" />
+
+    <Label text= "Enter the name of a favorite artist: "
+           GridPane.columnIndex="1" GridPane.rowIndex="1"
+           styleClass="message" />
+
+    <TextField fx:id="bandNameTextField"
+               GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
     <Button fx:id="enterButton" text="Enter" onAction="#getSimilarMusic"
             GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="1" />
 
-    <Label fx:id="resultsLabel" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="5" styleClass="message"/>
+    <Label fx:id="resultsLabel"
+           GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="5"
+           styleClass="message"/>
 
     <Label fx:id="label1" GridPane.columnIndex="0" GridPane.rowIndex="6" />
     <Label fx:id="label2" GridPane.columnIndex="0" GridPane.rowIndex="7" />
@@ -41,15 +51,12 @@
         </ArrayList>
 
         <ArrayList fx:id="similarArtistTextsArray">
-        <fx:reference source="similarArtistText1"/>
-        <fx:reference source="similarArtistText2"/>
-        <fx:reference source="similarArtistText3"/>
-        <fx:reference source="similarArtistText4"/>
-        <fx:reference source="similarArtistText5"/>
-    </ArrayList>
-
-
+            <fx:reference source="similarArtistText1"/>
+            <fx:reference source="similarArtistText2"/>
+            <fx:reference source="similarArtistText3"/>
+            <fx:reference source="similarArtistText4"/>
+            <fx:reference source="similarArtistText5"/>
+        </ArrayList>
     </fx:define>
-
 
 </GridPane>
